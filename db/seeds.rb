@@ -12,12 +12,15 @@
 #   Post.create(title: "Title", body: "Body words go here...")
 # end
 
+User.create(email: 'rob.lockhart@yahoo.com.uk', password: 'password', password_confirmation: 'password')
+
 10.times do |n|
   title  = "title 1 - #{n} - minimum length"
   body = "body here - #{n} - minimum length"
   Post.create!(
     title: title,
-    body: body)
+    body: body,
+    user_id: User.first.id)
 end
 
 # 99.times do |n|
