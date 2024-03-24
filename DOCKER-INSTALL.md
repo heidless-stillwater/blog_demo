@@ -1,3 +1,4 @@
+
 # INSTALL
 
 ```
@@ -14,13 +15,13 @@ sudo apt install apt-utils
 RAILS_ENV='development'
 echo $RAILS_ENV
 
-docker build -f Dockerfile -t blog_demo .
+docker build -f Dockerfile -t blog-demo-0 .
 
-docker run -p 3000:3000 -v $(pwd):/rails blog_demo
+docker run -p 3000:3000 -v $(pwd):/rails blog-demo-0
 
 ---
 
-gcloud builds submit --tag gcr.io/heidless-pfolio-deploy-5/blog_demo_tst_1 .
+gcloud builds submit --tag gcr.io/heidless-pfolio-deploy-5/rails-proto-0 .
 
 ---
 
